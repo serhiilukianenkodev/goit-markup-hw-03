@@ -195,6 +195,10 @@ header {
 }
 
 /* work-section */
+.work-section {
+  padding-top: 0;
+}
+
 .section-heading {
   font-weight: 700;
   font-size: 36px;

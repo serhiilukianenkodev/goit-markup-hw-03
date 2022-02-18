@@ -250,10 +250,14 @@ header {
 /* footer */
 .footer {
   background: var(--bg-section);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer .logo {
   color: var(--text-white);
+  display: inline-block;
+  margin-bottom: 20px;
 }
 .footer address {
   font-size: 14px;
@@ -262,10 +266,29 @@ header {
   color: var(--text-white);
 }
 
+.contact-info {
+  display: block;
+  line-height: 1.71;
+}
+
 /*  portfolio*/
 .portfolio {
   font-family: Roboto;
   background: var(--bg-main);
+}
+
+.portfolio {
+  font-size: 0;
+}
+
+.portfolio-selection {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.portfolio-selection > .item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .portfolio-selection .btn {
@@ -278,6 +301,8 @@ header {
   background: var(--bg-accent);
   border-radius: 4px;
   border: none;
+
+  padding: 6px 22px;
 }
 
 .portfolio-selection .btn:hover,
@@ -298,6 +323,7 @@ header {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--text-heading);
+  margin-top: 20px;
 }
 
 .portfolio-projects p {
@@ -305,4 +331,18 @@ header {
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--text-main);
+  margin-top: 4px;
+}
+
+.portfolio-projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-projects > .item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+
+.portfolio-projects > .item:nth-last-child(n + 4) {
+  margin-bottom: 30px;
 }

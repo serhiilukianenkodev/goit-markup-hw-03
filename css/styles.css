@@ -9,35 +9,14 @@
   --bg-accent: #f5f4fa;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 body {
   background-color: var(--bg-main);
   color: var(--text-main);
   font-family: Roboto;
 }
 
-.container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .list {
   list-style: none;
-  padding-left: 0;
 }
 
 .link {
@@ -46,10 +25,6 @@ body {
 }
 
 /* header */
-header {
-  border-bottom: 1px solid #ececec;
-}
-
 .logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -57,7 +32,6 @@ header {
   line-height: 1.2;
   letter-spacing: 0.03em;
   color: #000000;
-
   text-decoration: none;
 }
 
@@ -65,51 +39,16 @@ header {
   color: var(--text-accent);
 }
 
-.page-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.page-nav {
-  display: flex;
-  align-items: center;
-}
-
-.nav-list {
-  display: flex;
-  padding-left: 92px;
-
+.contacts,
+.site-nav {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+
+.site-nav {
   color: var(--text-heading);
-}
-
-.nav-list .item:not(:last-child) {
-  margin-right: 50px;
-}
-.nav-list {
-  display: flex;
-}
-
-.nav-list .link,
-.contacts .link {
-  display: inline-block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
-.contacts {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-}
-
-.contacts > .link:not(:last-child) {
-  margin-right: 50px;
 }
 
 .link:hover,
@@ -117,25 +56,18 @@ header {
   color: var(--text-accent);
 }
 
+.site-nav .is-active-page {
+  color: var(--text-accent);
+}
 /* main */
 
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-/* section-order */
-.section-order {
+/* sectin-order */
+.sectin-order {
   background: var(--bg-section);
   text-align: center;
-  min-height: 600px;
-  display: flex;
-  align-items: center;
-}
-.section-order h1 {
-  font-size: 0;
 }
 
-.section-order h2 {
+.sectin-order h1 {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -144,38 +76,25 @@ header {
   text-transform: uppercase;
 }
 
-.section-order button {
-  margin-top: 30px;
-  padding: 10px 32px;
+.sectin-order button {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
   color: var(--text-white);
   background: var(--text-accent);
-
-  cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  cursor: pointer;
 }
 
-.section-order button:hover,
-.section-order button:focus {
-  color: var(--text-accent);
-  background: var(--text-white);
+.sectin-order button:hover,
+.sectin-order button:focus {
+  background: #188ce8;
 }
 
 /* benefits-section */
-.benefits-section h2 {
-  font-size: 0;
-}
-
-.benefits-list {
-  display: flex;
-}
-
-.benefits-list h3 {
-  padding-bottom: 10px;
+.benefits-section h3 {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -184,21 +103,13 @@ header {
   color: var(--text-heading);
 }
 
-.benefits-list p {
+.benefits-section p {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
 
-.benefits-list .item:not(:last-child) {
-  margin-right: 30px;
-}
-
 /* work-section */
-.work-section {
-  padding-top: 0;
-}
-
 .section-heading {
   font-weight: 700;
   font-size: 36px;
@@ -206,16 +117,6 @@ header {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--text-heading);
-
-  margin-bottom: 50px;
-}
-
-.work-section .list {
-  display: flex;
-}
-
-.work-section .list-item:not(:last-child) {
-  margin-right: 30px;
 }
 
 /* team-section */
@@ -223,76 +124,56 @@ header {
   background: var(--bg-accent);
 }
 
-.team-section .team-list {
-  display: flex;
-}
-.team-section .card {
+.card {
   width: 270px;
-  padding-bottom: 30px;
   background: var(--bg-main);
   text-align: center;
   font-size: 16px;
-  line-height: 1.18;
+  line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
 }
 
-.team-section .card:not(:last-child) {
-  margin-right: 30px;
+.team-section .card-description {
+  padding: 30px;
 }
 
-.card h3 {
+.team-section h3 {
   color: var(--text-heading);
   font-weight: 500;
-  margin-top: 30px;
-  margin-bottom: 10px;
+  font-size: inherit;
+
+  margin: 0 0 10px 0;
+}
+
+.team-section p {
+  margin: 0;
 }
 
 /* footer */
 .footer {
   background: var(--bg-section);
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
 
 .footer .logo {
   color: var(--text-white);
-  display: inline-block;
-  margin-bottom: 20px;
 }
-.footer address {
+.address {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: var(--text-white);
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.6);
 }
 
-.contact-info {
-  display: block;
-  line-height: 1.71;
+.address p {
+  color: var(--text-white);
 }
 
 /*  portfolio*/
 .portfolio {
   font-family: Roboto;
   background: var(--bg-main);
-}
-
-.portfolio {
-  font-size: 0;
-}
-
-.portfolio-selection {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
-.portfolio-selection > .item:not(:last-child) {
-  margin-right: 8px;
 }
 
 .portfolio-selection .btn {
@@ -305,20 +186,22 @@ header {
   background: var(--bg-accent);
   border-radius: 4px;
   border: none;
-
-  padding: 6px 22px;
 }
 
 .portfolio-selection .btn:hover,
 .portfolio-selection .btn:focus {
   color: var(--text-white);
   background: var(--text-accent);
-  /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
   cursor: pointer;
 }
 
-.portfolio-projects img:hover {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.portfolio-projects .card-description {
+  padding: 20px;
+}
+
+.portfolio-projects a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .portfolio-projects h2 {
@@ -327,7 +210,7 @@ header {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--text-heading);
-  margin-top: 20px;
+  margin: 0 0 4px 0;
 }
 
 .portfolio-projects p {
@@ -335,18 +218,5 @@ header {
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--text-main);
-  margin-top: 4px;
-}
-
-.portfolio-projects {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.portfolio-projects > .item:not(:nth-child(3n)) {
-  margin-right: 30px;
-}
-
-.portfolio-projects > .item:nth-last-child(n + 4) {
-  margin-bottom: 30px;
+  margin: 0;
 }

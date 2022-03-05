@@ -9,10 +9,30 @@
   --bg-accent: #f5f4fa;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 body {
   background-color: var(--bg-main);
   color: var(--text-main);
   font-family: Roboto;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .list {

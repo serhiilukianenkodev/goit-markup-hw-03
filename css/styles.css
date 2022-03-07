@@ -17,8 +17,8 @@ h5,
 h6,
 p,
 ul {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -45,6 +45,22 @@ body {
 }
 
 /* header */
+header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -55,20 +71,37 @@ body {
   text-decoration: none;
 }
 
+.main-nav .logo {
+  margin-right: 93px;
+}
+
 .logo-accent {
   color: var(--text-accent);
 }
 
 .contacts,
 .site-nav {
+  display: flex;
+  justify-content: center;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
 
+.contacts > li:not(:last-child) {
+  margin-right: 50px;
+}
+
 .site-nav {
   color: var(--text-heading);
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav > li:not(:last-child) {
+  margin-right: 50px;
 }
 
 .link:hover,

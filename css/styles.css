@@ -7,6 +7,8 @@
   --bg-main: #ffffff;
   --bg-section: #2f303a;
   --bg-accent: #f5f4fa;
+
+  --card-set-gap: 30px;
 }
 
 h1,
@@ -19,6 +21,12 @@ p,
 ul {
   margin: 0;
   padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 body {
@@ -161,10 +169,6 @@ header {
   padding-bottom: 0;
 }
 
-.benefits-section h2 {
-  font-size: 0;
-}
-
 .benefits-section h3 {
   font-weight: 700;
   font-size: 14px;
@@ -191,7 +195,7 @@ header {
 }
 
 .benefits-list > li:not(:last-child) {
-  padding-right: 30px;
+  padding-right: var(--card-set-gap);
 }
 
 /* work-section */
@@ -231,7 +235,7 @@ header {
 }
 
 .team-section .card-description {
-  padding: 30px;
+  padding: var(--card-set-gap);
 }
 
 .team-section h3 {
@@ -241,10 +245,6 @@ header {
 
   margin: 0 0 10px 0;
 }
-
-/* .team-section p {
-  margin: 0;
-} */
 
 .team-list {
   display: flex;
@@ -285,6 +285,16 @@ header {
   background: var(--bg-main);
 }
 
+.portfolio-selection {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.portfolio-selection > li:not(:last-child) {
+  margin-right: 9px;
+}
+
 .portfolio-selection .btn {
   font-weight: 500;
   font-size: 16px;
@@ -301,11 +311,28 @@ header {
 .portfolio-selection .btn:focus {
   color: var(--text-white);
   background: var(--text-accent);
+
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
   cursor: pointer;
+}
+
+.portfolio-projects {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--card-set-gap));
+  margin-left: calc(-1 * var(--card-set-gap));
+}
+
+.portfolio-projects > .item {
+  flex-basis: calc(100% / 3 - var(--card-set-gap));
+  margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
 }
 
 .portfolio-projects .card-description {
   padding: 20px;
+  border: 1px solid #eeeeee;
 }
 
 .portfolio-projects a {
@@ -328,4 +355,17 @@ header {
   letter-spacing: 0.03em;
   color: var(--text-main);
   margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

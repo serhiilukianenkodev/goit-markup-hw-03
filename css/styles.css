@@ -114,10 +114,18 @@ header {
 }
 /* main */
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 /* sectin-order */
+
 .sectin-order {
+  min-height: 600px;
   background: var(--bg-section);
   text-align: center;
+  padding-top: 200px;
 }
 
 .sectin-order h1 {
@@ -127,6 +135,8 @@ header {
   letter-spacing: 0.06em;
   color: var(--text-white);
   text-transform: uppercase;
+
+  margin-bottom: 30px;
 }
 
 .sectin-order button {
@@ -147,6 +157,10 @@ header {
 }
 
 /* benefits-section */
+.benefits-section h2 {
+  font-size: 0;
+}
+
 .benefits-section h3 {
   font-weight: 700;
   font-size: 14px;
@@ -154,12 +168,26 @@ header {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--text-heading);
+  margin-bottom: 10px;
 }
 
 .benefits-section p {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+}
+
+.benefits-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.benefits-list > li {
+  width: calc(1200px / 4 - 30px);
+}
+
+.benefits-list > li:not(:last-child) {
+  padding-right: 30px;
 }
 
 /* work-section */

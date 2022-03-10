@@ -61,7 +61,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 80px;
 }
 
 .main-nav {
@@ -98,6 +97,12 @@ header {
   letter-spacing: 0.02em;
 }
 
+.site-nav a {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: block;
+}
+
 .contacts > li:not(:last-child) {
   margin-right: 50px;
 }
@@ -130,15 +135,19 @@ header {
 /* sectin-order */
 
 .sectin-order {
-  min-height: 600px;
   background: var(--bg-section);
   text-align: center;
   padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .sectin-order h1 {
   margin-bottom: 30px;
-
+  max-width: 700px;
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -191,11 +200,11 @@ header {
 }
 
 .benefits-list > li {
-  width: calc(1200px / 4 - var(--card-set-gap));
+  width: calc((100% - var(--card-set-gap) * 3) / 4);
 }
 
 .benefits-list > li:not(:last-child) {
-  padding-right: var(--card-set-gap);
+  margin-right: var(--card-set-gap);
 }
 
 /* work-section */
@@ -212,7 +221,10 @@ header {
 
 .work-list {
   display: flex;
-  justify-content: space-between;
+}
+
+.work-list > li:not(:last-child) {
+  margin-right: var(--card-set-gap);
 }
 
 /* team-section */
@@ -248,7 +260,10 @@ header {
 
 .team-list {
   display: flex;
-  justify-content: space-between;
+}
+
+.team-list > .card:not(:last-child) {
+  margin-right: var(--card-set-gap);
 }
 
 /* footer */
@@ -273,7 +288,7 @@ header {
 }
 
 .address > a {
-  display: inline-block;
+  display: block;
   margin-top: 9px;
 }
 
@@ -298,6 +313,7 @@ header {
 }
 
 .portfolio-selection .btn {
+  padding: 6px 22px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
@@ -328,14 +344,15 @@ header {
 }
 
 .portfolio-projects > .item {
-  flex-basis: calc(100% / 3 - var(--card-set-gap));
+  flex-basis: calc((100%- 2 * var(--card-set-gap)) / 3);
   margin-left: var(--card-set-gap);
   margin-top: var(--card-set-gap);
 }
 
 .portfolio-projects .card-description {
-  padding: 20px;
+  padding: 20px 24px;
   border: 1px solid #eeeeee;
+  border-top: none;
 }
 
 .portfolio-projects a {
